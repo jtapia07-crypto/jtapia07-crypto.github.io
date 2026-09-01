@@ -35,12 +35,17 @@ body {
     align-items: center;
     z-index: 10;
 }
-
 .logo {
-    font-weight: 900;
-    letter-spacing: 3px;
-    font-size: 0.9rem;
+    font-family: 'Courier New', monospace; /* Tipografía tipo terminal/código */
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
 }
+
+.logo:hover {
+    color: #00ffcc; /* Cambia a un verde/cian neón al pasar el cursor */
+}
+
 
 .pill-btn {
     display: inline-block;
@@ -68,6 +73,8 @@ body {
     letter-spacing: -2px;
     user-select: none;
     z-index: 1;
+    display: inline-block;
+    will-change: transform;
 }
 
 .title-left { top: 10%; left: 2%; }
