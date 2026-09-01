@@ -1,8 +1,0 @@
-"# luigiweb" 
-"# jtapia07-crypto.github.io" 
-"# jtapia07-crypto.github.io" 
-"# jtapia07-crypto.github.io" 
-"# jtapia07-crypto.github.io" 
-"# jtapia07-crypto.github.io" 
-"# jtapia07-crypto.github.io" 
-"# jtapia07-crypto.github.io" 

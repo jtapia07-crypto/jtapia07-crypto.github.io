@@ -2,38 +2,124 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>MorenitoYico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORENITOYICO | LinkHub & Bazar</title>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
 
+    <!-- HERO / SECCIÓN PRINCIPAL -->
     <div class="hero-container">
-        <!-- Encabezado con navegación tipo píldoras -->
+        <!-- Navegación Superior -->
         <header class="navbar">
             <div class="nav-left">
-                <a href="index.html" class="pill-btn active">Home</a>
-                <a href="tienda.html" class="pill-btn">Works</a>
-                <a href="contenido.html" class="pill-btn">Archive</a>
-
-            </div>
-            
-            <div class="logo">MO YI K O</div>
-
-            <div class="nav-right">
-                <a href="about.html" class="pill-btn">About</a>
-                <a href="contact.html" class="pill-btn">Contact</a>
-            </div>
-        </header>
-
-        <!-- Título Gigante -->
-        <h1 class="title-left">TEXTO</h1>
-        <h1 class="title-right">TEXTO</h1>
-
-        <!-- Botón Central de Play -->
-        <div class="play-container">
-            <button class="play-btn">ENTRAR</button>
-        </div>
+              <a href="index.html" class="pill-btn active">Inicio</a>
+              <a href="about.html" class="pill-btn">Sobre mí</a>
     </div>
+    
+    <div class="logo">MORENITOYICO</div>
+
+    <div class="nav-right">
+        <a href="reservas.html" class="pill-btn">Reservas</a>
+        <a href="contact.html" class="pill-btn">Contacto</a>
+    </div>
+</header>
+
+        <!-- Títulos Gigantes de Fondo -->
+        <h1 class="title-left">MORENITO</h1>
+        <h1 class="title-right">YICO</h1>
+
+        <!-- 3 BLOQUES PRINCIPALES TIPO LINKTREE -->
+        <section class="cards-wrapper">
+            
+            <!-- Bloque 1: Redes Sociales & Links Directos -->
+            <article class="feature-card social-card">
+                <span class="card-tag">01</span>
+                <h2>Redes Sociales</h2>
+                <div class="social-links-list">
+                    <a href="https://tiktok.com" target="_blank" class="social-item">TikTok <span>→</span></a>
+                    <a href="https://instagram.com" target="_blank" class="social-item">Instagram <span>→</span></a>
+                    <a href="https://youtube.com" target="_blank" class="social-item">YouTube <span>→</span></a>
+                </div>
+            </article>
+
+            <!-- Bloque 2: Acceso Directo a Página de Reservas -->
+            <article class="feature-card highlight">
+                <span class="card-tag">02</span>
+                <h2>Reservas & Videos</h2>
+                <p>Pide tu saludo personalizado o agenda una videollamada 1 a 1.</p>
+                <a href="reservas.html" class="pill-btn highlight-btn">Ir a Reservas</a>
+            </article>
+
+            <!-- Bloque 3: El Bazar -->
+            <article class="feature-card">
+                <span class="card-tag">03</span>
+                <h2>El Bazar</h2>
+                <p>Ropa, accesorios y presets de edición exclusivos.</p>
+                <a href="#bazar" class="pill-btn">Explorar Bazar</a>
+            </article>
+
+        </section>
+    </div>
+
+    <!-- SECCIÓN DEL BAZAR / TIENDA -->
+    <section id="bazar" class="bazar-section">
+        <div class="section-header">
+            <span class="section-subtitle">SELECCIÓN EXCLUSIVA</span>
+            <h2>EL BAZAR</h2>
+        </div>
+
+        <div class="bazar-grid">
+            <!-- Producto 1 -->
+            <article class="bazar-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Hoodie+Mikki" alt="Hoodie Oversize">
+                    <span class="badge">NUEVO</span>
+                </div>
+                <div class="card-content">
+                    <span class="category">Ropa / Merch</span>
+                    <h3>Hoodie Oversize "Mikki"</h3>
+                    <p class="description">Algodón pesado de corte editorial. Colección limitada.</p>
+                    <div class="card-footer">
+                        <span class="price">$45.000 CLP</span>
+                        <a href="#" class="buy-btn">Ver Detalle</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="bazar-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Lentes+Dark" alt="Lentes Dark Mode">
+                </div>
+                <div class="card-content">
+                    <span class="category">Accesorios</span>
+                    <h3>Lentes Preset Dark Mode</h3>
+                    <p class="description">Filtro de luz azul con marco de acetato mate.</p>
+                    <div class="card-footer">
+                        <span class="price">$25.000 CLP</span>
+                        <a href="#" class="buy-btn">Ver Detalle</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="bazar-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300/1a1a1a/ffffff?text=LUTs+Pack" alt="LUTs Cinema">
+                </div>
+                <div class="card-content">
+                    <span class="category">Contenido Digital</span>
+                    <h3>LUTs Cinema Pack</h3>
+                    <p class="description">Ajustes de color profesionales para tus videos.</p>
+                    <div class="card-footer">
+                        <span class="price">$15.000 CLP</span>
+                        <a href="#" class="buy-btn">Ver Detalle</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
 
 </body>
 </html>
