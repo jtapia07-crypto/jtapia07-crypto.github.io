@@ -1,0 +1,100 @@
+/* 1. Reset básico y limpieza de márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
+    color: #ffffff;
+}
+
+/* 2. Pantalla completa con imagen de fondo */
+.hero-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* Cambia 'IMG/tu-fondo.jpg' por el nombre de una imagen que tengas en tu carpeta IMG */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../IMG/tu-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* 3. Navegación superior */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+}
+
+/* Botones con forma de píldora */
+.pill-btn {
+    display: inline-block;
+    padding: 8px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+}
+
+.pill-btn:hover, .pill-btn.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* 4. Títulos gigantes de fondo */
+.title-left, .title-right {
+    position: absolute;
+    top: 25%;
+    font-size: 5.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title-left {
+    left: 40px;
+}
+
+.title-right {
+    right: 40px;
+}
+
+/* 5. Botón flotante central */
+.play-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-btn {
+    padding: 14px 38px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}

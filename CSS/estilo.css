@@ -1,0 +1,53 @@
+/* Contenedor flexible para los 3 bloques */
+.cards-wrapper {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1100px;
+    z-index: 2; /* Los pone por encima de los textos gigantes */
+}
+
+/* Estilo individual de cada tarjeta */
+.feature-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card-tag {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    letter-spacing: 2px;
+}
+
+.feature-card h2 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.feature-card p {
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Resaltar la tarjeta del centro si deseas */
+.feature-card.highlight {
+    border-color: rgba(255, 255, 255, 0.5);
+}
