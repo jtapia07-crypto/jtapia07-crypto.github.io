@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZFQH3NC6G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3ZFQH3NC6G');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bazar & Contenido | MORENITOYICO</title>
@@ -19,52 +29,50 @@
 
     <main class="hero-container" style="max-width: 800px;">
         <span class="group-title">Catálogo Exclusivo</span>
-        <h1 style="font-size: 1.5rem; font-weight: 400; margin-bottom: 10px;">Bazar & Contenido</h1>
+        <h1 style="font-size: 1.5rem; font-weight: 400; margin-bottom: 10px;">Bazar & Drop Zone</h1>
         <p style="color: #666; font-size: 0.85rem; margin-bottom: 30px;">
-            Pagos mediante transferencia directa o equivalencia en suscripción activa.
+            Envíos discretos y accesos directos vía transferencia o validación de suscripción.
         </p>
 
         <div class="products-grid">
 
-            <!-- Item 1: Ropa Usada (Stock Único / Transferencia) -->
+            <!-- 1. Boxer 3D -->
             <div class="product-card">
                 <div class="product-img">
-                    <img src="IMG/producto02.png" alt="Polera Streetwear" onerror="this.parentNode.classList.add('no-img')">
+                    <img src="IMG/boxer-3d.png" alt="Boxer Black 3D" onerror="this.parentNode.classList.add('no-img')">
                 </div>
-                <h3>Boxer Talla S (Usado)</h3>
-                <span class="price">$12.000 CLP / Transferencia</span>
-                <a href="#" onclick="comprarPorWhatsApp('Boxer Talla S (Usado)', '$12.000 CLP / Transferencia')" class="btn-buy">Pedir por WhatsApp</a>
+                <h3>Custom Black Edition</h3>
+                <span class="price">$35.000 CLP / Transferencia</span>
+                <a href="#" onclick="comprarPorWhatsApp('Custom Black Edition (Usado)', '$35.000 CLP')" class="btn-buy">Pedir por WhatsApp</a>
             </div>
 
-            <!-- Item 2: Video Personalizado (Pago vía Suscripción) -->
+            <!-- 2. VIP Telegram -->
             <div class="product-card">
                 <div class="product-img">
-                    <img src="IMG/videoscustome.png" alt="Drop #01 — Limited Video (72 hrs)" onerror="this.parentNode.classList.add('no-img')">
+                    <img src="IMG/telegram-vip.png" alt="Canal VIP" onerror="this.parentNode.classList.add('no-img')">
                 </div>
-                <h3>Drop #01 — Limited Video (72 hrs)</h3>
-                <span class="price">1 Mes de Arsmate / OnlyFans</span>
-                <a href="#" onclick="comprarPorWhatsApp('Drop #01 — Limited Video (72 hrs)', 'Suscripción Arsmate/OnlyFans')" class="btn-buy">Canjear / Pedir</a>
+                <h3>VIP Access — Telegram Pass</h3>
+                <span class="price">$15.000 CLP / Suscripción</span>
+                <a href="#" onclick="comprarPorWhatsApp('VIP Access Telegram', '$15.000 CLP / Suscripción')" class="btn-buy">Obtener Acceso</a>
             </div>
 
-            <!-- Item 3: Membresía / VIP (Transferencia o Plataformas) -->
+            <!-- 3. Video Tiempo Limitado -->
             <div class="product-card">
                 <div class="product-img">
-                    <img src="IMG/grupovip.png" alt="Membresia Telegram" onerror="this.parentNode.classList.add('no-img')">
+                    <img src="IMG/drop-video.jpg" alt="Video Exclusivo" onerror="this.parentNode.classList.add('no-img')">
                 </div>
-                <h3>Acceso Canal VIP Telegram</h3>
-                <span class="price">$15.000 CLP / Mes</span>
-                <a href="#" onclick="comprarPorWhatsApp('Acceso Canal VIP Telegram', '$15.000 CLP / Mes')" class="btn-buy">Unirme por WhatsApp</a>
+                <h3>Drop #01 (Tiempo Limitado)</h3>
+                <span class="price">$20.000 CLP / 1 Mes Sub</span>
+                <a href="#" onclick="comprarPorWhatsApp('Drop #01 Video Exclusivo', '$20.000 CLP')" class="btn-buy">Desbloquear Video</a>
             </div>
 
         </div>
     </main>
 
-    <!-- Script de Notificación y Redirección -->
     <script>
-        const MI_WHATSAPP = '56949696642'; // Tu número de WhatsApp real con código de país
+        const MI_WHATSAPP = '56949696642';
 
         function comprarPorWhatsApp(producto, precio) {
-            // Mensaje automático para que el cliente solo le dé a "Enviar"
             const mensaje = `🚨 *NUEVO INTERÉS EN COMPRA - MORENITOYICO* 🚨\n\n` +
                             `📌 *Producto/Servicio:* ${producto}\n` +
                             `💰 *Valor/Método:* ${precio}\n\n` +
