@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -7,8 +7,10 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* Fondo con degradado radial sutil */
 body {
-    background-color: #050505;
+    background: radial-gradient(circle at top, #111116 0%, #050505 70%);
+    background-attachment: fixed;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -37,7 +39,7 @@ body {
     text-decoration: none;
     font-size: 0.85rem;
     margin-left: 20px;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -48,12 +50,34 @@ body {
 .hero-container {
     width: 100%;
     max-width: 600px;
-    padding: 40px 20px;
+    padding: 20px 20px 60px 20px;
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
+/* Indicador En Vivo */
+.status-badge {
+    font-size: 0.7rem;
+    color: #888;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: -10px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #00ff66;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #00ff66;
+}
+
+/* Grupos de Enlaces */
 .group-title {
     display: block;
     font-size: 0.75rem;
@@ -71,57 +95,56 @@ body {
     color: #eee;
     text-decoration: none;
     font-size: 1rem;
-    border-bottom: 1px solid #1a1a1a;
-    transition: border-color 0.2s, color 0.2s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .minimal-link:hover {
-    color: #fff;
-    border-bottom-color: #ffffff;
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.4);
 }
 
 .minimal-link span {
     color: #555;
     font-size: 0.9rem;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
-/* Bazar */
-.bazar-section {
-    width: 100%;
-    max-width: 800px;
-    padding: 60px 20px;
-    margin-top: 40px;
-    border-top: 1px solid #111;
+.minimal-link:hover span {
+    color: #ffffff;
+    transform: translateX(4px);
 }
 
-.section-header h2 {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    color: #666;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
+/* Bazar - Grid & Cards con Glassmorphism */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
+    gap: 25px;
 }
 
 .product-card {
-    background: #0a0a0a;
-    border: 1px solid #1a1a1a;
+    background: rgba(15, 15, 15, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
     padding: 20px;
-    text-align: left;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .product-img {
     width: 100%;
     height: 220px;
-    background: #111;
+    background: #0a0a0a;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -129,6 +152,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.05);
 }
 
 .product-img.no-img::after {
@@ -147,49 +175,11 @@ body {
 }
 
 .price {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #888;
 }
 
-.btn-buy {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background: #ffffff;
-    color: #000000;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-top: 5px;
-}
-/* Inputs Minimalistas */
-.minimal-input {
-    width: 100%;
-    background: #0a0a0a;
-    border: 1px solid #1a1a1a;
-    color: #ffffff;
-    padding: 14px 16px;
-    font-size: 0.9rem;
-    border-radius: 0;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.minimal-input:focus {
-    border-color: #ffffff;
-}
-
-.minimal-input::placeholder {
-    color: #444;
-}
-
-select.minimal-input {
-    appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-}
-/* Botones Transparentes y Redondos */
+/* Botones Transparentes Redondos */
 .btn-buy {
     display: inline-block;
     width: 100%;
@@ -197,19 +187,36 @@ select.minimal-input {
     padding: 12px 24px;
     background-color: transparent;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 50px; /* Bordes completamente redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     box-sizing: border-box;
+    margin-top: auto;
 }
 
-/* Efecto al pasar el cursor (Hover) */
 .btn-buy:hover {
     background-color: #ffffff;
     color: #000000;
+    border-color: #ffffff;
+}
+
+/* Inputs para Reservas */
+.minimal-input {
+    width: 100%;
+    background: rgba(15, 15, 15, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.minimal-input:focus {
     border-color: #ffffff;
 }
