@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar & Contenido | MORENITOYICO</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+</head>
+<body>
+
+    <header class="navbar-minimal">
+        <div class="logo"><a href="index.html" style="color:#fff; text-decoration:none;">MORENITOYICO</a></div>
+        <nav class="nav-links">
+            <a href="index.html">← Inicio</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+    </header>
+
+    <main class="hero-container" style="max-width: 800px;">
+        <span class="group-title">Catálogo Exclusivo</span>
+        <h1 style="font-size: 1.5rem; font-weight: 400; margin-bottom: 10px;">Bazar & Contenido</h1>
+        <p style="color: #666; font-size: 0.85rem; margin-bottom: 30px;">
+            Pagos mediante transferencia directa o equivalencia en suscripción activa.
+        </p>
+
+        <div class="products-grid">
+
+            <!-- Item 1: Ropa Usada (Stock Único / Transferencia) -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="IMG/producto02.png" alt="Polera Streetwear" onerror="this.parentNode.classList.add('no-img')">
+                </div>
+                <h3>Boxer Talla S (Usado)</h3>
+                <span class="price">$12.000 CLP / Transferencia</span>
+                <a href="#" onclick="comprarPorWhatsApp('Boxer Talla S (Usado)', '$12.000 CLP / Transferencia')" class="btn-buy">Pedir por WhatsApp</a>
+            </div>
+
+            <!-- Item 2: Video Personalizado (Pago vía Suscripción) -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="IMG/videoscustome.png" alt="Drop #01 — Limited Video (72 hrs)" onerror="this.parentNode.classList.add('no-img')">
+                </div>
+                <h3>Drop #01 — Limited Video (72 hrs)</h3>
+                <span class="price">1 Mes de Arsmate / OnlyFans</span>
+                <a href="#" onclick="comprarPorWhatsApp('Drop #01 — Limited Video (72 hrs)', 'Suscripción Arsmate/OnlyFans')" class="btn-buy">Canjear / Pedir</a>
+            </div>
+
+            <!-- Item 3: Membresía / VIP (Transferencia o Plataformas) -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="IMG/grupovip.png" alt="Membresia Telegram" onerror="this.parentNode.classList.add('no-img')">
+                </div>
+                <h3>Acceso Canal VIP Telegram</h3>
+                <span class="price">$15.000 CLP / Mes</span>
+                <a href="#" onclick="comprarPorWhatsApp('Acceso Canal VIP Telegram', '$15.000 CLP / Mes')" class="btn-buy">Unirme por WhatsApp</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Script de Notificación y Redirección -->
+    <script>
+        const MI_WHATSAPP = '56949696642'; // Tu número de WhatsApp real con código de país
+
+        function comprarPorWhatsApp(producto, precio) {
+            // Mensaje automático para que el cliente solo le dé a "Enviar"
+            const mensaje = `🚨 *NUEVO INTERÉS EN COMPRA - MORENITOYICO* 🚨\n\n` +
+                            `📌 *Producto/Servicio:* ${producto}\n` +
+                            `💰 *Valor/Método:* ${precio}\n\n` +
+                            `Hola! Me interesa este producto. ¿Me envías los datos de transferencia o el link para validar la suscripción?`;
+
+            const url = `https://wa.me/${MI_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>

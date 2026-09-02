@@ -5,98 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas | MORENITOYICO</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
 </head>
 <body>
 
-    <!-- Navegación Superior -->
-    <header class="navbar" style="padding: 20px 40px;">
-        <div class="nav-left">
-            <a href="index.html" class="pill-btn">← Volver al Inicio</a>
-        </div>
-        <div class="logo" id="logo-glitch">MORENITOYICO</div>
-        <div class="nav-right">
-            <a href="contact.html" class="pill-btn">Contacto</a>
-        </div>
+    <header class="navbar-minimal">
+        <div class="logo"><a href="index.html" style="color:#fff; text-decoration:none;">MORENITOYICO</a></div>
+        <nav class="nav-links">
+            <a href="index.html">← Inicio</a>
+            <a href="contact.html">Contacto</a>
+        </nav>
     </header>
 
-    <!-- Contenedor del Formulario -->
-    <main class="booking-container" style="margin-top: 20px;">
-        <div class="section-header">
-            <span class="section-subtitle">EXPERIENCIAS EXCLUSIVAS</span>
-            <h2>AGENDAR / RESERVAR</h2>
-        </div>
+    <main class="hero-container" style="max-width: 650px;">
+        <span class="group-title">Experiencias Exclusivas</span>
+        <h1 style="font-size: 1.5rem; font-weight: 400; margin-bottom: 30px;">Agendar Servicio</h1>
 
-        <form id="bookingForm" class="booking-form">
-            <div class="form-group">
-                <label for="service">Tipo de Servicio</label>
-                <select id="service" name="service" required>
-                    <option value="Video Saludo Personalizado">Video Saludo Personalizado</option>
-                    <option value="Videollamada 1 a 1">Videollamada 1 a 1 (15 min)</option>
-                    <option value="Asesoría / Colaboración">Asesoría / Colaboración</option>
+        <form id="bookingForm" style="display: flex; flex-direction: column; gap: 25px;">
+            
+            <!-- Selección de Servicio -->
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <label class="group-title">1. Selecciona el servicio</label>
+                <select id="service" name="service" required class="minimal-input">
+                    <option value="Video Saludo Personalizado - $15.000 CLP">Video Saludo Personalizado — $15.000 CLP</option>
+                    <option value="Videollamada 1 a 1 (15 min) - $35.000 CLP">Videollamada 1 a 1 (15 min) — $35.000 CLP</option>
+                    <option value="Asesoría / Colaboración - Cotizar">Asesoría / Colaboración — Cotizar</option>
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="name">Tu Nombre</label>
-                <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez" required>
+            <!-- Datos de Contacto -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div>
+                    <label class="group-title">2. Tu Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez" required class="minimal-input">
+                </div>
+                <div>
+                    <label class="group-title">3. Tu WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+56 9..." required class="minimal-input">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            <!-- Fecha Sugerida -->
+            <div>
+                <label class="group-title">4. Fecha tentativa sugerida</label>
+                <input type="date" id="date" name="date" class="minimal-input" style="color-scheme: dark;">
             </div>
 
-            <div class="form-group">
-                <label for="details">Detalles de la solicitud</label>
-                <textarea id="details" name="details" rows="4" placeholder="Indica el motivo del saludo o tema de la videollamada..."></textarea>
+            <!-- Detalles -->
+            <div>
+                <label class="group-title">5. Detalles o mensaje personalizado</label>
+                <textarea id="details" name="details" rows="3" placeholder="¿Para quién es el saludo? ¿Qué te gustaría hablar?" class="minimal-input"></textarea>
             </div>
 
-            <button type="submit" id="submitBtn" class="submit-btn">Enviar Solicitud</button>
+            <button type="submit" id="submitBtn" class="btn-buy" style="padding: 16px; margin-top: 10px; cursor: pointer;">Enviar Solicitud vía WhatsApp →</button>
         </form>
     </main>
 
-    <!-- Script Directo a WhatsApp y Formspree -->
     <script>
-        // CONFIGURA TUS DATOS AQUÍ:
-        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mdeoeekr'; // Pega tu ID de Formspree
-        const PHONE_NUMBER = '56955217344'; // Tu número completo con código de país (Ej: 56912345678 para Chile)
+        const PHONE_NUMBER = '56949696642'; // Tu número real
 
-        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            btn.innerText = 'Procesando...';
-            btn.disabled = true;
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+            
             const service = document.getElementById('service').value;
-            const details = document.getElementById('details').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value || 'Sin fecha definida';
+            const details = document.getElementById('details').value || 'Sin detalles extra';
 
-            // 1. Envío silencioso a Formspree (Correo)
-            const formData = new FormData(this);
-            fetch(FORMSPREE_ENDPOINT, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).catch(err => console.log("Error registrando en correo:", err));
-
-            // 2. Formatear mensaje para WhatsApp API oficial
-            const message = `🚨 *NUEVA RESERVA - MORENITOYICO* 🚨\n\n` +
-                            `👤 *Nombre:* ${name}\n` +
-                            `✉️ *Email:* ${email}\n` +
+            const message = ` *NUEVA RESERVA - MORENITOYICO* \n\n` +
                             `📌 *Servicio:* ${service}\n` +
-                            `📝 *Detalles:* ${details || 'Sin detalles adicionales'}`;
+                            `👤 *Nombre:* ${name}\n` +
+                            `📱 *Contacto:* ${phone}\n` +
+                            `📅 *Fecha Tentativa:* ${date}\n` +
+                            `📝 *Detalles:* ${details}`;
 
-            const waUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
-
-            // 3. Abrir WhatsApp directamente en una nueva pestaña
-            window.open(waUrl, '_blank');
-
-            btn.innerText = 'Enviar Solicitud';
-            btn.disabled = false;
-            this.reset();
+            window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
         });
     </script>
-
 </body>
 </html>

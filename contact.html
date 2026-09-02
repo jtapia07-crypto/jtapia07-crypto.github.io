@@ -5,43 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | MORENITOYICO</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
 </head>
 <body>
 
-    <header class="navbar" style="padding: 20px 40px;">
-        <div class="nav-left">
-            <a href="index.html" class="pill-btn">← Volver al Inicio</a>
-        </div>
-        <div class="logo" id="logo-glitch">MORENITOYICO</div>
-        <div class="nav-right">
-            <a href="reservas.html" class="pill-btn">Reservas</a>
-        </div>
+    <header class="navbar-minimal">
+        <div class="logo"><a href="index.html" style="color:#fff; text-decoration:none;">MORENITOYICO</a></div>
+        <nav class="nav-links">
+            <a href="index.html">← Inicio</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
     </header>
 
-    <main class="booking-container" style="margin-top: 20px;">
-        <div class="section-header">
-            <span class="section-subtitle">MENSAJE DIRECTO</span>
-            <h2>CONTACTO</h2>
+    <main class="hero-container" style="max-width: 600px;">
+        <span class="group-title">Contacto Directo</span>
+        <h1 style="font-size: 1.5rem; font-weight: 400; margin-bottom: 20px;">Hablemos</h1>
+        <p style="color: #777; font-size: 0.9rem; line-height: 1.6; margin-bottom: 30px;">
+            Para colaboraciones de marcas, eventos, prensa o consultas comerciales, utiliza cualquiera de los canales oficiales directos.
+        </p>
+
+        <div class="link-group">
+            <span class="group-title">Atención e Inquiries</span>
+            <a href="mailto:contacto@morenitoyico.com" class="minimal-link">Email Comercial <span>contacto@morenitoyico.com</span></a>
+            <a href="https://wa.me/56912345678?text=Hola,%20tengo%20una%20consulta%20comercial" target="_blank" class="minimal-link">WhatsApp Business <span>Chatear →</span></a>
+            <a href="https://instagram.com" target="_blank" class="minimal-link">Instagram Direct <span>@morenitoyico →</span></a>
         </div>
-
-        <form class="booking-form">
-            <div class="form-group">
-                <label for="c-name">Nombre</label>
-                <input type="text" id="c-name" placeholder="Tu nombre" required>
-            </div>
-
-            <div class="form-group">
-                <label for="c-email">Correo Electrónico</label>
-                <input type="email" id="c-email" placeholder="tu@email.com" required>
-            </div>
-
-            <div class="form-group">
-                <label for="c-message">Mensaje</label>
-                <textarea id="c-message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Enviar Mensaje</button>
-        </form>
     </main>
 
 </body>
