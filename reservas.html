@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZFQH3NC6G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3ZFQH3NC6G');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas · Morenito</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+    <meta name="theme-color" content="#0d0c0b">
+</head>
+<body>
+
+    <header class="navbar-minimal">
+        <div class="logo"><a href="index.html">MORENITO</a></div>
+        <nav class="nav-links">
+            <a href="index.html">← Inicio</a>
+            <a href="contact.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="hero-container" style="max-width: 560px;">
+        <div>
+            <span class="group-title">Experiencias</span>
+            <h1 class="page-title">Agendar conmigo</h1>
+            <p class="page-subtitle">
+                Elige lo que quieres y te respondo por WhatsApp para coordinar.
+            </p>
+        </div>
+
+        <form id="bookingForm" style="display: flex; flex-direction: column; gap: 24px;">
+            
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label class="group-title">1. Servicio</label>
+                <select id="service" name="service" required class="minimal-input">
+                    <option value="Video Saludo Personalizado - $15.000 CLP">Video Personalizado — $10.000 CLP</option>
+                    <option value="Videollamada 1 a 1 (15 min) - $35.000 CLP">Videollamada 1 a 1 (15 min) — $10.000 CLP</option>
+                    <option value="Asesoría / Colaboración - Cotizar">Colaboración / Otros — Cotizar</option>
+                </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                <div>
+                    <label class="group-title">2. Tu nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Cómo te llamas" required class="minimal-input">
+                </div>
+                <div>
+                    <label class="group-title">3. WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+56 9..." required class="minimal-input">
+                </div>
+            </div>
+
+            <div>
+                <label class="group-title">4. Fecha tentativa</label>
+                <input type="date" id="date" name="date" class="minimal-input" style="color-scheme: dark;">
+            </div>
+
+            <div>
+                <label class="group-title">5. Detalles (opcional)</label>
+                <textarea id="details" name="details" rows="3" placeholder="Cuéntame qué te gustaría..." class="minimal-input"></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-buy" style="padding: 15px; margin-top: 6px; cursor: pointer;">
+                Enviar solicitud por WhatsApp →
+            </button>
+        </form>
+    </main>
+
+    <script>
+        const PHONE_NUMBER = '56949696642';
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const service = document.getElementById('service').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value || 'Sin fecha definida';
+            const details = document.getElementById('details').value || 'Sin detalles extra';
+
+            const message = `Hola Morenito 👋%0A%0AQuiero agendar:%0A• Servicio: ${service}%0A• Nombre: ${name}%0A• WhatsApp: ${phone}%0A• Fecha: ${date}%0A• Detalles: ${details}`;
+            
+            window.open(`https://wa.me/${PHONE_NUMBER}?text=${message}`, '_blank');
+        });
+    </script>
+
+</body>
+</html>
