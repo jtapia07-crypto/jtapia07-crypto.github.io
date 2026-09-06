@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ========== BASE ========== */
+body {
+    background: radial-gradient(ellipse at top, #1a1816 0%, #0d0c0b 65%);
+    background-attachment: fixed;
+    color: #f2efe9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* ========== HEADER ========== */
+.navbar-minimal {
+    width: 100%;
+    max-width: 720px;
+    padding: 28px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    font-size: 0.85rem;
+    color: #f2efe9;
+    text-transform: uppercase;
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: #9a958c;
+    text-decoration: none;
+    font-size: 0.82rem;
+    margin-left: 22px;
+    transition: color 0.25s ease;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: #f2efe9;
+}
+
+/* ========== HERO / MAIN ========== */
+.hero-container {
+    width: 100%;
+    max-width: 520px;
+    padding: 10px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Status */
+.status-badge {
+    font-size: 0.68rem;
+    color: #9a958c;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: -6px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #c4a574;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(196, 165, 116, 0.5);
+}
+
+/* Groups */
+.group-title {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: #7a756c;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+.minimal-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0;
+    color: #e8e4dc;
+    text-decoration: none;
+    font-size: 1.02rem;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(242, 239, 233, 0.08);
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.minimal-link:hover {
+    color: #ffffff;
+    border-bottom-color: rgba(196, 165, 116, 0.45);
+}
+
+.minimal-link span {
+    color: #6b665e;
+    font-size: 0.9rem;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.minimal-link:hover span {
+    color: #c4a574;
+    transform: translateX(5px);
+}
+
+/* ========== BAZAR ========== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.product-card {
+    background: rgba(26, 24, 22, 0.7);
+    border: 1px solid rgba(242, 239, 233, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(196, 165, 116, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.product-img {
+    width: 100%;
+    height: 220px;
+    background: #141210;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.04);
+}
+
+.product-img.no-img::after {
+    content: "Sin Imagen";
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #4a4640;
+    font-size: 0.8rem;
+}
+
+.product-card h3 {
+    font-size: 0.95rem;
+    font-weight: 450;
+    color: #f2efe9;
+}
+
+.price {
+    font-size: 0.84rem;
+    color: #9a958c;
+}
+
+/* ========== BUTTONS ========== */
+.btn-buy {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 13px 24px;
+    background-color: transparent;
+    color: #f2efe9;
+    border: 1px solid rgba(196, 165, 116, 0.45);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: auto;
+    letter-spacing: 0.3px;
+}
+
+.btn-buy:hover {
+    background-color: #c4a574;
+    color: #0d0c0b;
+    border-color: #c4a574;
+}
+
+/* ========== FORMS ========== */
+.minimal-input {
+    width: 100%;
+    background: rgba(20, 18, 16, 0.85);
+    border: 1px solid rgba(242, 239, 233, 0.1);
+    color: #f2efe9;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.25s;
+}
+
+.minimal-input:focus {
+    border-color: rgba(196, 165, 116, 0.6);
+}
+
+.minimal-input::placeholder {
+    color: #6b665e;
+}
+
+/* ========== UTILITIES ========== */
+.page-title {
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: #f2efe9;
+    margin-bottom: 8px;
+    letter-spacing: -0.2px;
+}
+
+.page-subtitle {
+    font-size: 0.9rem;
+    color: #9a958c;
+    margin-bottom: 28px;
+    line-height: 1.55;
+}
+
+/* Small text helper */
+.soft-text {
+    color: #9a958c;
+    font-size: 0.85rem;
+}

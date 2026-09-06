@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZFQH3NC6G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3ZFQH3NC6G');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar · Morenito</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+</head>
+<body>
+
+    <header class="navbar-minimal">
+        <div class="logo"><a href="index.html" >MORENITO</a></div>
+        <nav class="nav-links">
+            <a href="index.html">← Inicio</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+    </header>
+
+    <main class="hero-container" style="max-width: 800px;">
+        <span class="group-title">Tienda</span>
+        <h1 style="font-size: 1.5rem; font-weight: 400; margin-bottom: 10px;">Bazar exclusivo</h1>
+        <p style="color: #9a958c; font-size: 0.85rem; margin-bottom: 30px;">
+            Envíos discretos y accesos directos vía transferencia o validación de suscripción.
+        </p>
+
+        <div class="products-grid">
+
+            <!-- 1. Boxer 3D -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="IMG/producto02.png" alt="Black boxer shorts displayed as a product photo against a dark, clean studio background. The image focuses on the garment itself with no people present. The overall mood is neutral and commercial." onerror="this.parentNode.classList.add('no-img')">
+                </div>
+                <h3>Boxer Talla S (Usado)</h3>
+                <span class="price">12.000 CLP / Transferencia</span>
+                <a href="#" onclick="comprarPorWhatsApp('Boxer Talla S (Usado)', '12.000 CLP')" class="btn-buy">Pedir por WhatsApp</a>
+            </div>
+
+            <!-- 2. VIP Telegram -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="IMG/grupovip.png" alt="A dark, minimal digital graphic showing a Telegram-style chat or channel preview with a modern, tech-focused aesthetic. The image is centered on screen-based content and suggests access to a private VIP group. The tone is sleek, serious, and exclusive." onerror="this.parentNode.classList.add('no-img')">
+                </div>
+                <h3>VIP Access — Telegram Pass</h3>
+                <span class="price">$10.000 CLP / Suscripción</span>
+                <a href="#" onclick="comprarPorWhatsApp('VIP Access Telegram', '$10.000 CLP / Suscripción')" class="btn-buy">Obtener Acceso</a>
+            </div>
+
+            <!-- 3. Video Tiempo Limitado -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="IMG/vpersonalizado.png" alt="A shirtless man wearing a black mask sits in a dimly lit room while a smartphone on a tripod records him. The phone screen shows a red recording indicator, the text 00:00:00, and the label HD. The wider setting is a dark studio with a dramatic, intense mood and a tense cinematic atmosphere." onerror="this.parentNode.classList.add('no-img')">
+                </div>
+                <h3>Drop #01 (Tiempo Limitado)</h3>
+                <span class="price">$10.000 CLP / 1 Mes Sub</span>
+                <a href="#" onclick="comprarPorWhatsApp('Drop #01 Video Exclusivo', '$10.000 CLP')" class="btn-buy">Desbloquear Video</a>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const MI_WHATSAPP = '56949696642';
+
+        function comprarPorWhatsApp(producto, precio) {
+            const mensaje = ` *NUEVO INTERÉS EN COMPRA - MORENITO* \n\n` +
+                            `📌 *Producto/Servicio:* ${producto}\n` +
+                            `💰 *Valor/Método:* ${precio}\n\n` +
+                            `Hola! Me interesa este producto. ¿Me envías los datos de transferencia o el link para validar la suscripción?`;
+
+            const url = `https://wa.me/${MI_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
