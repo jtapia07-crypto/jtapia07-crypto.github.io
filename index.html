@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MorenitoYico | 18+ Exclusive Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Archivo+Black&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- PUERTA 18+ OVERLAY (PERSISTENTE VÍA LOCALSTORAGE) -->
+<div id="gate18" class="gate-overlay">
+  <div class="gate-card">
+    <div class="gate-brand">
+      <svg class="gate-icon" viewBox="0 0 100 90"><use href="#fox"/></svg>
+      <svg class="gate-icon" viewBox="0 0 100 100"><use href="#bun"/></svg>
+    </div>
+    <h2>Contenido 18+</h2>
+    <p>Este perfil contiene material explícito y de clasificación para adultos. Confirma tu edad para ingresar.</p>
+    <div class="gate-actions">
+      <button id="btnEnter18" class="gate-btn enter">Soy mayor de 18 años</button>
+      <a href="https://google.com" class="gate-btn leave">Salir</a>
+    </div>
+  </div>
+</div>
+
+<!-- SPRITE SVG DE SÍMBOLOS -->
+<svg width="0" height="0" style="position:absolute; pointer-events:none;" aria-hidden="true">
+  <defs>
+    <!-- Zorro (M) -->
+    <symbol id="fox" viewBox="0 0 100 90">
+      <path fill="currentColor" d="M6 4 36 36 50 24 64 36 94 4V56L50 88 6 56Z"/>
+      <path fill="#000000" d="M20 48 42 55 38 62 22 57ZM80 48 58 55 62 62 78 57Z"/>
+    </symbol>
+    <!-- Conejo (Y) -->
+    <symbol id="bun" viewBox="0 0 100 100">
+      <path fill="currentColor" d="M12 4H30L50 40 70 4H88L62 54V84Q62 94 52 94H40Q32 94 32 84V68L22 64 38 58V54Z"/>
+      <circle fill="#000000" cx="52" cy="70" r="4"/>
+    </symbol>
+    <!-- Badge Verificado -->
+    <symbol id="check" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2L15.09 3.26L18.3 2.84L19.65 5.88L22.69 7.23L22.27 10.45L23.53 13.54L21.43 16.12L21.01 19.34L17.88 19.97L15.78 22.55L12.69 21.29L9.6 22.55L7.5 19.97L4.37 19.34L3.95 16.12L1.85 13.54L3.11 10.45L2.69 7.23L5.73 5.88L7.08 2.84L10.29 3.26L12 2Z"/>
+      <path fill="#000000" d="M10 15.5L6.5 12L7.91 10.59L10 12.67L16.09 6.58L17.5 8L10 15.5Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="hub-container">
+  
+  <!-- 2. PERFIL -->
+  <header class="profile">
+    <div class="avatar-wrap">
+      <div class="avatar-ring">
+        <svg class="avatar-icon" viewBox="0 0 100 90"><use href="#fox"/></svg>
+      </div>
+      <span class="status-dot" title="Responde hoy"></span>
+    </div>
+
+    <div class="profile-info">
+      <h1 class="handle">
+        MorenitoYico
+        <svg class="verified-badge" viewBox="0 0 24 24"><use href="#check"/></svg>
+      </h1>
+      <p class="tagline">Tease, pies y customs. El resto se paga.</p>
+      <p class="sub-tag">cerca, pero no gratis.</p>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat"><span class="num">18+</span><span class="lbl">Explicito en OF</span></div>
+      <div class="stat-line"></div>
+      <div class="stat"><span class="num">12 h</span><span class="lbl">Respuesta</span></div>
+      <div class="stat-line"></div>
+      <div class="stat"><span class="num">desde $10</span><span class="lbl">Customs</span></div>
+    </div>
+  </header>
+
+  <!-- 3. LINKS -->
+  <main class="links-list">
+    <!-- OF PRIMERO CON PULSO NEÓN -->
+    <a href="https://onlyfans.com/Morenitoyico" class="link-btn of-main" target="_blank" rel="noopener">
+      <span class="badge-hot">VIP CONTENT</span>
+      <div class="btn-text">
+        <strong>🔥 OnlyFans Principal</strong>
+        <small>Acceso completo al contenido exclusivo</small>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <!-- TELEGRAM -->
+    <a href="https://t.me/+jEA4xUF9PfBlZmVh" class="link-btn" target="_blank" rel="noopener">
+      <div class="btn-icon">✈️</div>
+      <div class="btn-text">
+        <strong>Canal de Telegram</strong>
+        <small>Novedades, teases y lanzamientos</small>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <!-- CUSTOM DIRECTO -->
+    <a href="#custom-form" class="link-btn">
+      <div class="btn-icon">🎬</div>
+      <div class="btn-text">
+        <strong>Video Personalizado</strong>
+        <small>Encarga tu clip a medida desde $15</small>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <!-- PACKS Y TIENDA -->
+    <a href="#bestsellers" class="link-btn">
+      <div class="btn-icon">💎</div>
+      <div class="btn-text">
+        <strong>Best Sellers & Packs</strong>
+        <small>Suscripciones, sets de fotos y guiones</small>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <!-- TRIBUTE BÁSICO -->
+    <a href="https://mpago.la/2hvK6FV" class="link-btn" target="_blank" rel="noopener">
+      <div class="btn-icon">💸</div>
+      <div class="btn-text">
+        <strong>Tribute directo ($10+)</strong>
+        <small>Apoyo libre sin requerimiento</small>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <!-- REDES CORTE (X ES EL MAIN, IG/TK SOLO TEASE) -->
+    <div class="social-row">
+      <a href="https://x.com/Morenitoyico" class="social-btn main" target="_blank" rel="noopener">
+        <span>X (Main)</span>
+      </a>
+      <a href="https://instagram.com/2004kts" class="social-btn" target="_blank" rel="noopener">
+        <span>Instagram</span>
+      </a>
+      <a href="https://tiktok.com/@null--" class="social-btn" target="_blank" rel="noopener">
+        <span>TikTok</span>
+      </a>
+      <a href="https://wa.me/null" class="social-btn" target="_blank" rel="noopener">
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- 4. FEED 9:16 (EMBEBIDO - EL PLAY MANDA A OF) -->
+  <section class="hub-section">
+    <h2 class="sec-title">Recent Teasers</h2>
+    <div class="reel-grid">
+      <!-- Clip 1 -->
+      <a href="https://onlyfans.com/Morenitoyico" class="tile" target="_blank" rel="noopener">
+        <video autoplay loop muted playsinline poster="preview1.webp">
+          <source src="preview1.webm" type="video/webm">
+        </video>
+        <span class="play"></span>
+        <b>Pies</b>
+        <small>Ver en OnlyFans</small>
+      </a>
+      <!-- Clip 2 -->
+      <a href="https://onlyfans.com/Morenitoyico" class="tile" target="_blank" rel="noopener">
+        <video autoplay loop muted playsinline poster="preview2.webp">
+          <source src="preview2.webm" type="video/webm">
+        </video>
+        <span class="play"></span>
+        <b>Torso</b>
+        <small>Ver en OnlyFans</small>
+      </a>
+      <!-- Clip 3 -->
+      <a href="https://onlyfans.com/Morenitoyico" class="tile" target="_blank" rel="noopener">
+        <video autoplay loop muted playsinline poster="preview3.webp">
+          <source src="preview3.webm" type="video/webm">
+        </video>
+        <span class="play"></span>
+        <b>Espejo</b>
+        <small>Ver en OnlyFans</small>
+      </a>
+      <!-- Clip 4 -->
+      <a href="https://onlyfans.com/Morenitoyico" class="tile" target="_blank" rel="noopener">
+        <video autoplay loop muted playsinline poster="preview4.webp">
+          <source src="preview4.webm" type="video/webm">
+        </video>
+        <span class="play"></span>
+        <b>Dinámica</b>
+        <small>Ver en OnlyFans</small>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5. BEST SELLER (3 CARDS) -->
+  <section id="bestsellers" class="hub-section">
+    <h2 class="sec-title">Best Sellers</h2>
+    <div class="packs-stack">
+      <!-- Card 1 -->
+      <div class="pack-card hot">
+        <span class="hot-tag">MÁS PEDIDO</span>
+        <div class="pack-head">
+          <h3>VIP mes</h3>
+          <span class="price">$12</span>
+        </div>
+        <p>Mes 1 a mitad. Feed exclusivo + prioridad en customs.</p>
+        <a class="btn-sub hot" href="https://onlyfans.com/Morenitoyico" target="_blank" rel="noopener">Suscribirme</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pack-card">
+        <div class="pack-head">
+          <h3>Set de 8 Fotos</h3>
+          <span class="price">$9</span>
+        </div>
+        <p>Lookbook completo. Sin cara si lo pides. Entrega por OF o TG.</p>
+        <a class="btn-sub" href="https://t.me/qnenaxitoo" target="_blank" rel="noopener">Comprar Set</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pack-card">
+        <div class="pack-head">
+          <h3>Custom Video</h3>
+          <span class="price">Desde $10</span>
+        </div>
+        <p>5 m ($10) / 15 m ($25) / 20 m ($30). Entrega 24 h. Pago antes de grabar.</p>
+        <a class="btn-sub" href="#custom-form">Encargar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FORMULARIO VIDEO PERSONALIZADO -->
+  <section id="custom-form" class="hub-section">
+    <h2 class="sec-title">Solicitar Custom</h2>
+    <p class="form-notice">No grabo menores ni a terceros. El pago se realiza antes de producir.</p>
+    
+    <form id="whatsappForm" class="custom-form">
+      <div class="field">
+        <label for="yourName">Tu nombre</label>
+        <input type="text" id="yourName" placeholder="Ej: Carlos" required>
+      </div>
+
+      <div class="field">
+        <label for="targetName">¿Para quién es?</label>
+        <input type="text" id="targetName" placeholder="Ej: Para mí / Para mi amigo Alex" required>
+      </div>
+
+      <div class="field">
+        <label for="videoTier">Duración y tarifa</label>
+        <select id="videoTier" required>
+          <option value="5 m - $10 USD">5 minutos  — $10 USD</option>
+          <option value="10 m - $25 USD">10 minutos — $25 USD</option>
+          <option value="15 m - $30 USD">15 minutos — $30 USD</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="instructions">Instrucciones concretas (máx. 280 caract.)</label>
+        <textarea id="instructions" maxlength="280" rows="3" placeholder="Detalla cómo quieres el video o qué mensaje debo decir..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-sub hot full">Enviar solicitud por WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- 7. VIDEOLLAMADA -->
+  <section class="hub-section">
+    <h2 class="sec-title">Videollamada 1-on-1</h2>
+    <div class="call-card">
+      <div class="call-head">
+        <h3>Sesión Privada 10 min</h3>
+        <span class="price">$12</span>
+      </div>
+      <p>Cámara tuya opcional. Se agenda hora, no se improvisa.</p>
+      <a class="btn-sub" href="t.me/qnenaxitoo" target="_blank" rel="noopener">Reservar Hora</a>
+    </div>
+  </section>
+
+  <!-- 8. TIENDA 2x2 -->
+  <section class="hub-section">
+    <h2 class="sec-title">Tienda Digital</h2>
+    <div class="store-grid">
+      <div class="store-item">
+        <div class="item-thumb"><img src="thumb_voice.webp" alt="Pack Voz" loading="lazy"></div>
+        <h4>Boxer Usado</h4>
+        <span class="store-price">$15000</span>
+        <a class="btn-sub" href="https://mpago.la/TU_LINK1" target="_blank" rel="noopener">Comprar</a>
+      </div>
+      <div class="store-item">
+        <div class="item-thumb"><img src="thumb_preset.webp" alt="Preset" loading="lazy"></div>
+        <h4>Pack Sticker</h4>
+        <span class="store-price">$2000</span>
+        <a class="btn-sub" href="https://mpago.la/TU_LINK2" target="_blank" rel="noopener">Comprar</a>
+      </div>
+      <div class="store-item">
+        <div class="item-thumb"><img src="thumb_script.webp" alt="Guion UGC" loading="lazy"></div>
+        <h4>Cooming Soon</h4>
+        <span class="store-price">$5</span>
+        <a class="btn-sub" href="https://mpago.la/TU_LINK3" target="_blank" rel="noopener">Comprar</a>
+      </div>
+      <div class="store-item">
+        <div class="item-thumb"><img src="thumb_tribute.webp" alt="Tribute" loading="lazy"></div>
+        <h4>Cooming Soon</h4>
+        <span class="store-price">$10+</span>
+        <a class="btn-sub" href="https://mpago.la/TU_LINK4" target="_blank" rel="noopener">Enviar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FOOTER LEGAL CORTO -->
+  <footer class="hub-footer">
+    <div class="brand">
+      <svg class="brand-logo" viewBox="0 0 100 90"><use href="#fox"/></svg>
+      <svg class="brand-logo" viewBox="0 0 100 100"><use href="#bun"/></svg>
+    </div>
+    <p>© MorenitoYico · Todos los derechos reservados. 18+ Only.</p>
+  </footer>
+
+</div>
+
+<!-- DOCK FIJO BOTTOM (CUSTOM / VIP / WHATSAPP) -->
+<div class="dock-bar">
+  <a href="#custom-form" class="dock-item">
+    <span>🎬</span>
+    <small>Custom</small>
+  </a>
+  <a href="https://onlyfans.com/MorenitoYico" class="dock-item hot" target="_blank" rel="noopener">
+    <span>🔥</span>
+    <small>VIP OF</small>
+  </a>
+  <a href="https://wa.me/null" class="dock-item" target="_blank" rel="noopener">
+    <span>💬</span>
+    <small>WhatsApp</small>
+  </a>
+</div>
+
+<script>
+  // Persistencia de confirmación de 18 años
+  const gate = document.getElementById('gate18');
+  const btnEnter = document.getElementById('btnEnter18');
+
+  if (localStorage.getItem('is18Confirmed') === 'true') {
+    gate.style.display = 'none';
+  }
+
+  btnEnter.addEventListener('click', () => {
+    localStorage.setItem('is18Confirmed', 'true');
+    gate.style.display = 'none';
+  });
+
+  // Generación automática del mensaje a WhatsApp desde el formulario
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const yourName = document.getElementById('yourName').value;
+    const targetName = document.getElementById('targetName').value;
+    const tier = document.getElementById('videoTier').value;
+    const instructions = document.getElementById('instructions').value;
+    
+    const phone = "56900000000"; // Reemplazar con tu número real
+    const text = `Hola MorenitoYico, quiero solicitar un Custom Video:%0A- *Mi nombre:* ${encodeURIComponent(yourName)}%0A- *Para quién:* ${encodeURIComponent(targetName)}%0A- *Duración/Tarifa:* ${encodeURIComponent(tier)}%0A- *Instrucciones:* ${encodeURIComponent(instructions)}`;
+    
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+  });
+</script>
+
+</body>
+</html>
