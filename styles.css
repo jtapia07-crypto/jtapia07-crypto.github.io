@@ -1,9 +1,9 @@
-/* ========== VARIABLES GLASSMORPHISM ULTRA TRANSPARENTE ========== */
+/* ========== VARIABLES GLASSMORPHISM MOBILE-FIRST ========== */
 :root {
   --bg: #050708;
-  --card-bg: rgba(5, 7, 8, 0.12); /* Ultra transparente para dejar ver el fondo */
+  --card-bg: rgba(5, 7, 8, 0.12); /* Cristal ultra transparente */
   --card-border: rgba(254, 0, 127, 0.28);
-  --btn-dark-bg: rgba(0, 0, 0, 0.45); /* Botones ligeramente más oscuros */
+  --btn-dark-bg: rgba(0, 0, 0, 0.45); /* Botones legibles */
   --pink-neon: #fe007f;
   --pink-glow: rgba(254, 0, 127, 0.65);
   --blush: #e19cbb;
@@ -29,24 +29,14 @@ body {
   min-height: 100vh;
   padding-bottom: 90px;
   
-  /* FONDO RESPONSIVO MÓVIL */
+  /* FONDO VERTICAL PREDETERMINADO PARA TODOS LOS DISPOSITIVOS */
   background-image: 
     linear-gradient(to bottom, rgba(5, 7, 8, 0.05) 0%, rgba(5, 7, 8, 0.5) 100%),
     url('bg-morenitoyico-mobile.webp');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-}
-
-/* CAMBIO A FONDO DESKTOP EN PANTALLAS ANCHAS */
-@media (min-width: 768px) {
-  body {
-    background-image: 
-      linear-gradient(to right, rgba(5, 7, 8, 0.6) 20%, rgba(5, 7, 8, 0.02) 100%),
-      url('bg-morenitoyico-desktop.webp');
-    background-position: right center;
-    background-attachment: fixed;
-  }
+  background-attachment: scroll; /* Scroll fluido para rendimiento móvil */
 }
 
 /* ANIMACIÓN RESPLANDOR NEÓN */
@@ -266,7 +256,7 @@ body {
   background: var(--card-border);
 }
 
-/* LINKS Y BOTONES LIGERAMENTE MÁS OSCUROS CON NEÓN */
+/* LINKS Y BOTONES */
 .links-list {
   display: flex;
   flex-direction: column;
@@ -279,7 +269,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 15px 18px;
-  background: var(--btn-dark-bg); /* Un poco más oscuro para que resalte la letra */
+  background: var(--btn-dark-bg);
   border: 1px solid var(--card-border);
   border-radius: 999px;
   color: var(--text);
@@ -488,7 +478,7 @@ body {
   color: var(--muted);
 }
 
-/* CELDAS Y TARJETAS TRANSPARENTES CON BOTONES MÁS OSCUROS */
+/* CELDAS Y TARJETAS TRANSPARENTES */
 .packs-stack {
   display: flex;
   flex-direction: column;
@@ -556,7 +546,7 @@ body {
   font-weight: 600;
   font-size: 0.82rem;
   cursor: pointer;
-  background: var(--btn-dark-bg); /* Ligeramente más oscuro */
+  background: var(--btn-dark-bg);
   backdrop-filter: blur(6px);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
@@ -720,7 +710,7 @@ body {
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
 }
 
-/* DOCK FIJO INFERIOR (GLASSMORPHISM FLOTANTE) */
+/* DOCK FIJO INFERIOR */
 .dock-bar {
   position: fixed;
   bottom: 12px;
